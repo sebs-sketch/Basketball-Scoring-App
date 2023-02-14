@@ -1,0 +1,254 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#display {
+	font-family: Inter, Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 3em;
+	background: #2B2D42;
+	color: #EDF2F4;
+	width: 800px;
+	height: 360px;
+	margin: 200px auto;
+	padding: 10px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-around;
+	cursor: default;
+}
+
+button {
+	font-family: Inter, Helvetica, Arial, sans-serif;
+	background: #2B2D42;
+	color: #EDF2F4;
+	border: solid #EDF2F4;
+	font-size: 40px;
+	box-shadow: 7px 7px 6px #000;
+	cursor: pointer;
+	transition: transform 0.01s ease-in;
+}
+
+button:active {
+	transform: translateX(2px) translateY(2px);
+	box-shadow: none;
+}
+
+button:onload {
+	color: #000 !important;
+}
+
+#timer-side {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#timer {
+	padding: 0 0 0 20px;
+	text-align: left;
+	line-height: 80px;
+	width: 345px;
+	height: 100px;
+	font-size: 96px;
+	border: solid 7px;
+	border-radius: 50px;
+}
+
+#timer, #home-score, #guests-score {
+	background-color: #d90429;
+	background-image: linear-gradient(#D90429, #8D99AE 70%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+}
+
+#home-side, #guests-side {
+	margin: 11px 6px 0 6px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#home-score, #guests-score {
+	text-align: right;
+	padding: 0 16px 0 0;
+	background-image: linear-gradient(to top, #D90429 5%, #8D99AE 70%);
+}
+
+.winning-score {
+	box-shadow: 5px 5px 6px #00FF19;
+}
+
+.losing-score {
+	box-shadow: 7px 7px 6px #D90429;
+}
+
+.player-name {
+	border: solid 5px;
+	border-radius: 50px;
+}
+
+.player-h3 {
+	font-size: 48px;
+	color: #FFBE0B;
+}
+
+.player-score {
+	line-height: 80px;
+	width: 220px;
+	height: 95px;
+	font-size: 96px;
+	border: solid 5px;
+	border-radius: 50px;
+}
+
+.score-buttons-div {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	width: 214px;
+	height: 70px;
+}
+
+.score-buttons {
+	width: 70px;
+	height: 70px;
+	font-size: 36px;
+	padding: 0 4px 0 0;
+	border: solid 2px #00FF19;
+	border-radius: 30px;
+	margin: 2px;
+}
+
+#plus-two-home, #plus-two-guests {
+	border-radius: 0;
+}
+
+#plus-one-home, #plus-one-guests {
+	border-radius: 30px 0 0 30px;
+}
+
+#plus-three-home, #plus-three-guests {
+	border-radius: 0 30px 30px 0;
+}
+
+#new-game {
+	margin: 20px 0 10px 0;
+	width: 160px;
+	height: 45px;
+	font-size: 24px;
+	border: solid 5px;
+	border-radius: 50px;
+}
+
+#period-fouls-div {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#period-div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#period-h3 {
+	padding: 0 0 0 8px;
+	margin: 0 2px;
+	width: 180px;
+	height: 60px;
+	font-size: 48px;
+	border: solid #EDF2F4 5px;
+	border-radius: 50px 0 0 50px;
+}
+
+#period-num {
+	line-height: 62px;
+	margin: 0 2px;
+	width: 120px;
+	height: 60px;
+	border: solid 5px #EDF2F4;
+}
+
+#fouls-div {
+	margin: 12px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#fouls-h3 {
+	line-height: 72px !important;
+	text-align: center !important;
+	padding: 0 !important;
+	width: 64px;
+	height: 70px;
+}
+
+.period-fouls-num {
+	width: 130px;
+	height: 70px;
+	font-size: 64px;
+	border-radius: 0 50px 50px 0;
+}
+
+#home-fouls-num, #fouls-h3, #guests-fouls-num {
+	line-height: 60px;
+	text-align: left;				/* Code in CSS for showing 0 to right */
+	padding: 0 4px 0 20px;
+	margin:  0 2px;
+	border: none;
+	outline: none;
+	position: relative;
+	z-index: 1;
+	background: linear-gradient(#FFBE0B 30%, #EF233C 85%);
+}
+
+#home-fouls-num::before, #fouls-h3::before, #guests-fouls-num::before {
+	content: "";
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	top: 5px;
+	bottom: 5px;
+	border-radius: 46px;			/* Border radius formula: R1 - D = R2 */
+	background-color: #2B2D42;
+	z-index: -1;
+}
+
+#home-fouls-num::after, #fouls-h3::after, #guests-fouls-num::after {
+	content: attr(data-score);
+	font-size: 64px;
+	background: linear-gradient(#FFBE0B 30%, #EF233C 85%);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	color: transparent;
+}
+
+#home-fouls-num {
+	border-radius: 50px 0 0 50px;
+}
+
+#home-fouls-num::before {
+	border-radius: 50px 0 0 50px;
+}
+
+#fouls-h3::before {
+	border-radius: 0;
+}
+
+#guests-fouls-num::before {
+	border-radius: 0 50px 50px 0;
+}
+

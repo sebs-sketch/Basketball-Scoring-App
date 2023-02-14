@@ -1,0 +1,56 @@
+
+
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Basketball scoreboard</title>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+			<link href="style.css" rel="stylesheet" type="text/css">
+		</head>
+		<body>
+			<div id="container">
+				<div id="display">
+					<div id="home-side">
+						<div class="player-name" id="home"><h3 class="player-h3">Home</h3></div>
+						<button class="player-score" id="home-score">188</button>
+						<div class="score-buttons-div" id="home-score-buttons">
+							<button class="score-buttons" id="plus-one-home">+1</button>
+							<button class="score-buttons" id="plus-two-home">+2</button>
+							<button class="score-buttons" id="plus-three-home">+3</button>
+						</div>
+					</div>
+					<div id="timer-side">
+						<button id="timer">88:88</button>
+						<button id="new-game">New Game</button>
+						<div id="period-fouls-div">
+							<div id="period-div">
+								<h3 id="period-h3">Period</h3>
+								<h3 class="period-fouls-num" id="period-num">88</h3>	
+							</div>
+							<div id="fouls-div">
+								<button class="period-fouls-num fouls-gradient" id="home-fouls-num" data-score="88"></button>
+								<h3 class="fouls-gradient" id="fouls-h3" data-score="F"></h3>
+								<button class="period-fouls-num fouls-gradient" id="guests-fouls-num" data-score="88"></button>
+							</div>
+						</div>
+					</div>
+					<div id="guests-side">
+						<div class="player-name" id="guests"><h3 class="player-h3">Guests</h3></div>
+						<button class="player-score" id="guests-score">188</button>
+						<div class="score-buttons-div" id="guests-score-buttons">
+							<button class="score-buttons" id="plus-one-guests">+1</button>
+							<button class="score-buttons" id="plus-two-guests">+2</button>
+							<button class="score-buttons" id="plus-three-guests">+3</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<script src="index.js"></script>
+		</body>
+	</html>
+
