@@ -1,5 +1,10 @@
 
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 #display {
 	font-family: Inter, Helvetica, Arial, sans-serif;
 	text-align: center;
