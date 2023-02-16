@@ -63,6 +63,7 @@ button:onload {
 	background-color: #d90429;
 	background-image: linear-gradient(#D90429, #8D99AE 70%);
 	background-size: 100%;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-background-clip: text;
@@ -231,6 +232,7 @@ button:onload {
 	content: attr(data-score);
 	font-size: 64px;
 	background: linear-gradient(#FFBE0B 30%, #EF233C 85%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	color: transparent;
