@@ -37,9 +37,9 @@ button:active {
 	box-shadow: none;
 }
 
-button:onload {
+/* button:onload {
 	color: #000 !important;
-}
+} */
 
 #timer-side {
 	display: flex;
